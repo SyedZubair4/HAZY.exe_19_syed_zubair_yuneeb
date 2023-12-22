@@ -1,0 +1,23 @@
+.img{
+    border-radius: 27px;
+    box-shadow: 1px 3px 6px rgba(245, 254, 253, 0.6);
+}
+
+
+#tag{
+    text-align: center;
+    font-size: 30px;
+    border-radius: 25px;
+    color: #FAA0A0;
+}
+
+
+#navbar{
+    text-align: center;
+    size: 40px;
+    color: aliceblue;
+}
+
+#home{
+    background: linear-gradient(45deg,#000435, #353935);
+}

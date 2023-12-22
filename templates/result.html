@@ -1,0 +1,14 @@
+
+{% block content %}
+{%load static %}
+<link rel="stylesheet" href="{%static 'image.css'%}">
+<span><h3 id="tag">Welcome {{nameuser}}!!</h3><br></span>
+
+
+{% for dest in dests%}
+<h2>Hello {{dests.name}}</h2><br>
+<h2>This is my brother {{dest.name}} and his age is {{dest.age}} and {{dest.place}} </h2><br>
+<img src="{{dest.img.url}}" alt="profile" class="img"><br><br>
+
+{% endfor %}
+{% endblock %}

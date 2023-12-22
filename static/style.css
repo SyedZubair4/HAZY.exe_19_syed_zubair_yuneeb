@@ -1,0 +1,14 @@
+body{
+    background: linear-gradient(45deg,#000435, #353935);
+    text-align: center;
+
+}
+
+h1{
+    border-radius: 27%;
+    box-shadow:  1px 4px 7px rgba(245, 254, 253, 0.7);
+    color: aqua;
+    border-color: #000435;
+    
+}
+

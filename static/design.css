@@ -1,0 +1,21 @@
+#log{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.form{
+    color: rgb(92, 23, 156);
+    border-radius: 25px;
+    text-align: center;
+    background-color: aqua;
+    box-shadow: 1px 3px 6px rgba(245, 254, 253, 0.6);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+
+
+}
+
+body{
+    background: linear-gradient(40deg,#000435, #353935);
+}
