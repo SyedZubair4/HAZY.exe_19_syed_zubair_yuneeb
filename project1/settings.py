@@ -32,8 +32,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "calc.apps.CalcConfig",
+    # "calc.apps.CalcConfig",
     "todolist.apps.TodolistConfig",
+    "accounts.apps.AccountsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -78,11 +79,12 @@ WSGI_APPLICATION = "project1.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'Zubair',
-        "USER" : 'postgres',
-        "PASSWORD" : '#78654NzMz@SZ6',
-        "HOST" : 'localhost'
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": 'todo_db',
+        "USER": 'root',
+        "PASSWORD": '##654(ZS@ZNM#94*?shqk0?',
+        "HOST": '127.0.0.1',
+        "PORT": '3306'
     }
 }
 

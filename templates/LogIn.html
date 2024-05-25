@@ -1,11 +1,17 @@
+{% block content %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
+    
+
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Login Page</title>
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="{% static 'global.css' %}" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
@@ -29,26 +35,26 @@
   </head>
   <body>
     <div class="loginpage">
-      <img class="blobsvector-icon" alt="" src="./public/blobsvector@2x.png" />
+      <img class="blobsvector-icon" alt="" src="{% static '/images/blobsvector@2x.png' %}" />
 
-      <img class="blobsvector-icon1" alt="" src="./public/blobsvector@2x.png" />
+      <img class="blobsvector-icon1" alt="" src="{% static '/images/blobsvector@2x.png' %}" />
 
-      <img class="blobsvector-icon2" alt="" src="./public/blobsvector@2x.png" />
+      <img class="blobsvector-icon2" alt="" src="{% static '/images/blobsvector@2x.png' %}" />
 
-      <img class="mainimage-icon" alt="" src="./public/mainimage@2x.png" />
+      <img class="mainimage-icon" alt="" src="{% static '/images/mainimage@2x.png' %}" />
 
       <div class="content">
         <div class="contentframe"></div>
         <div class="content1">
           <div class="reserved-directs-to"></div>
           <div class="buttongithub">
-            <img class="github-icon" alt="" src="./public/github@2x.png" />
+            <img class="github-icon" alt="" src="{% static '/images/github@2x.png' %}" />
 
             <div class="sing-up-with">Sing up with GitHub</div>
             <div class="buttonframe"></div>
           </div>
           <div class="buttongoogle" id="buttonGoogleContainer">
-            <img class="google-icon" alt="" src="./public/google@2x.png" />
+            <img class="google-icon" alt="" src="{% static 'images/google@2x.png' %}" />
 
             <div class="sing-up-with1">Sing up with Google</div>
             <div class="buttonframe"></div>
@@ -57,26 +63,29 @@
           <div class="already-have-a-container">
             <span>Are you a new user</span>
             <span class="span"> </span>
-            <span class="log-in"><a href="google.com" style="text-decoration: none;color:rgb(164, 164, 4)">Sign-up</a></span>
+            <span class="log-in"><a href="redirectToRegister" style="text-decoration: none;color:rgb(164, 164, 4)">Sign-up</a></span>
           </div>
+          <form action="Login" method="POST" >
+          {% csrf_token %}
           <div class="buttoncreateacc">
             
-            <div class="create-account"><button class="buttonframe2">Log-in</button></div>
+            <div class="create-account"><input type="Submit" class="buttonframe2"></div>
           </div>
           <div class="password-input">
             <div class="password">Password</div>
             <div class="passwordinp">
               <div class="enter-your-password"></div>
-              <div class="input"><input placeholder="Enter your Password here" type="password" class="input"> </div>
+              <div class="input"><input placeholder="Enter your Password here" name="password" type="password" class="input"> </div>
             </div>
           </div>
           <div class="email-input">
-            <div class="password">Email</div>
+            <div class="password">Username</div>
             <div class="passwordinp">
               <div class="enter-your-password"></div>
-              <div class="input"><input placeholder="Enter your Email here" type="email" class="input"></div>
+              <div class="input"><input placeholder="Enter your Name here" name="username" type="name" class="input"></div>
             </div>
           </div>
+        </form>
          
           <div class="title">Login to existing Account</div>
         </div>
@@ -93,3 +102,5 @@
       </script>
   </body>
 </html>
+
+{% endblock %}

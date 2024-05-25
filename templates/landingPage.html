@@ -123,19 +123,20 @@
             </li>
            
             <li>
-              <form action="register" ><button type="submit"  class="btn btn-warning" style="margin-right: 14px;">{% csrf_token %}Sign up</button></form>
+              <form action="redirectToRegister" ><button type="submit"  class="btn btn-warning" style="margin-right: 14px;">{% csrf_token %}Sign up</button></form>
               </li>
          
             
               <li>
-                <form action="userLogin" method="POST" ><button type="submit" class="btn btn-primary">{% csrf_token %}Log in</button></form>               
+                <form action="redirectToLogin" method="POST" ><button type="submit" class="btn btn-primary">{% csrf_token %}Log in</button></form>               
               </li>
 
             
             <li>
-              <form action="userLogout" method="POST"><button type="submit"  class="btn btn-warning" style="margin-right: 14px;">{% csrf_token %}Log Out</button></form>
-              </li>
-            
+              {% if user.is_authenticated %}
+              <form action="Logout" method="POST"><button type="submit"  class="btn btn-warning" style="margin-right: 14px;">{% csrf_token %}Log Out</button></form>
+              {% endif %}
+            </li>
 
         
           </ul>
